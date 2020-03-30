@@ -130,8 +130,8 @@ def draw_3d_skeleton(pose_cam_xyz, image_size):
             ax.plot(pose_cam_xyz[[joint_ind - 1, joint_ind], 0], pose_cam_xyz[[joint_ind - 1, joint_ind], 1],
                     pose_cam_xyz[[joint_ind - 1, joint_ind], 2], color=color_hand_joints[joint_ind],
                     linewidth=line_wd)
-
-    ax.axis('equal')
+	# RBR: causes NotImplementedError
+    #ax.axis('equal')
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
     ax.set_zlabel('Z')
